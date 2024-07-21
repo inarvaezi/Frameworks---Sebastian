@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Overview</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- This is the dashboard side menu (pops up) -->
+    <div class="bg-dark border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading text-white">Dashboard Kit</div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Tickets</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Ideas</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Contacts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Agents</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Articles</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Settings</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Subscription</a>
+      </div>
+    </div>
+    <!-- sidebar (dashboard side menu) wrapper end -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Overview</h1>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card text-center mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Unresolved</h5>
+                <p class="card-text display-4">60</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Overdue</h5>
+                <p class="card-text display-4">16</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Open</h5>
+                <p class="card-text display-4">43</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center mb-4">
+              <div class="card-body">
+                <h5 class="card-title">On hold</h5>
+                <p class="card-text display-4">64</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Today's trends</h5>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Resolved</h5>
+                <p class="card-text">449</p>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Received</h5>
+                <p class="card-text">426</p>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Average first response time</h5>
+                <p class="card-text">33m</p>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Average response time</h5>
+                <p class="card-text">3h 8m</p>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Resolution within SLA</h5>
+                <p class="card-text">94%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Unresolved tickets</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Waiting on Feature Request <span class="badge bg-danger float-end">4238</span></li>
+                  <li class="list-group-item">Awaiting Customer Response <span class="badge bg-danger float-end">1005</span></li>
+                  <li class="list-group-item">Awaiting Developer Fix <span class="badge bg-danger float-end">914</span></li>
+                  <li class="list-group-item">Pending <span class="badge bg-danger float-end">281</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Tasks</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Finish ticket update <span class="badge bg-danger float-end">URGENT</span></li>
+                  <li class="list-group-item">Create new ticket example <span class="badge bg-success float-end">NEW</span></li>
+                  <li class="list-group-item">Update ticket report <span class="badge bg-primary float-end">DEFAULT</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- External js -->
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
